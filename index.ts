@@ -1,6 +1,6 @@
-import fastify from 'fastify'
+import fastify, {FastifyInstance} from 'fastify'
 
-const server = fastify()
+const server: FastifyInstance = fastify()
 
 server.register(require('./routes/api/status'), {prefix: '/api'})
 server.register(require('./routes/ping'))
