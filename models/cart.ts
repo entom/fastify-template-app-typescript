@@ -7,19 +7,19 @@ export class Cart {
     this.products = [];
   }
 
-  clear() {
+  clear(): void {
     this.products = [];
   }
 
-  add(product: Product) {
+  add(product: Product): void {
     this.products.push(product);
   }
 
-  remove(index: number) {
+  remove(index: number): void {
     this.products.splice(index, 1);
   }
 
-  getProducts() {
+  getProducts(): Array<Product> {
     return this.products;
   }
 }
