@@ -4,10 +4,10 @@
   "description": "Fastify Template App With TypeScript",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "watch-build": "tsc -p tsconfig.json -watch",
-    "start": "node index.js",
-    "watch-start": "nodemon index.js",
+    "build": "tsc -p tsconfig-build.json",
+    "watch-build": "tsc -p tsconfig-build.json -watch",
+    "start": "node server.js",
+    "watch-start": "nodemon server.js",
     "test": "tap --reporter=list --watch",
     "test-coverage": "tap --reporter=list --watch --coverage-report=lcov"
   },

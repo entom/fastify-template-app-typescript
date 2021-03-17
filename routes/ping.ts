@@ -15,7 +15,7 @@ const opts = {
 
 async function routes(fastify: FastifyInstance, options: FastifyServerOptions) {
   fastify.get('/ping', opts, async (request: FastifyRequest, reply: FastifyReply) => {
-    return 'pong\n'
+    return 'pong'
   })
 }
 
