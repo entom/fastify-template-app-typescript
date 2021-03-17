@@ -22,4 +22,10 @@ export class Cart {
   getProducts(): Array<Product> {
     return this.products;
   }
+
+  calculateSum(): number {
+    let sum = 0;
+    this.products.map(it => sum += it.quantity * it.price);
+    return sum;
+  }
 }
