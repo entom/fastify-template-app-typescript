@@ -1,5 +1,5 @@
-const fastify = require('fastify')
-const helmet = require('fastify-helmet');
+import fastify from 'fastify'
+import helmet from 'fastify-helmet'
 
 function build(opts = {}) {
   const app = fastify(opts)

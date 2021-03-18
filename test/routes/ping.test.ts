@@ -1,12 +1,10 @@
-const {test} = require('tap')
-const b = require('../../app')
+const b = require('../../app.ts')
 
-test('requests the "/ping" route', async (t: any) => {
+test('requests the "/ping" route', async () => {
   const app = b()
-
   const response = await app.inject({
     method: 'GET',
     url: '/ping'
   })
-  t.strictEqual(response.statusCode, 200, 'returns a status code of 200')
-})
+  expect(response.statusCode).toBe(200); //returns a status code of 200
+});

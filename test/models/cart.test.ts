@@ -1,36 +1,35 @@
 import {Cart} from "../../models/cart";
 
-const {test} = require('tap')
-
 let cart: Cart = new Cart();
 
-test('create cart', async (t: any) => {
+test('create cart', async () => {
   cart = new Cart();
-  t.strictEqual(cart.getProducts().length, 0, 'returns number of 0 products')
+  expect(cart.getProducts().length).toBe(0) //returns number of 0 products
 })
 
-test('add 2 products into cart', async (t: any) => {
+test('add 2 products into cart', async () => {
   cart.add({price: 5, quantity: 1, title: 'Product 1'})
   cart.add({price: 10, quantity: 1, title: 'Product 2'})
 
-  t.strictEqual(cart.getProducts().length, 2, 'returns number of 2 products')
+  expect(cart.getProducts().length).toBe(2) //returns number of 2 products
 })
 
-test('calculate sum of cart', async (t: any) => {
-  cart.clear()
-
-  t.strictEqual(cart.calculateSum(), 0, 'returns value of 15')
+test('calculate sum of cart', async () => {
+  expect(cart.calculateSum()).toBe(15) //returns value of 15
 })
 
-test('remove product from', async (t: any) => {
+test('remove product from', async () => {
   cart.remove(0)
 
-  t.strictEqual(cart.calculateSum(), 0, 'returns number of 1 product')
+  expect(cart.getProducts().length).toBe(1) //returns number of 1 product
 })
 
-test('clear cart products', async (t: any) => {
+test('calculate sum of cart', async () => {
+  expect(cart.calculateSum()).toBe(10) //returns value of 15
+})
+
+test('clear cart products', async () => {
   cart.clear()
 
-  t.strictEqual(cart.getProducts().length, 0, 'returns number of 0 products')
+  expect(cart.getProducts().length).toBe(0) //returns number of 0 products
 })
-

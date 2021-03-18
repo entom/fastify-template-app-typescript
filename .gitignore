@@ -1,5 +1,6 @@
 .idea/
 *.js
+!jest.config.js
 ./**/.js
 ./**/**/.js
 ./**/**/**/.js
