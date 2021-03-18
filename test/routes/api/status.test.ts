@@ -1,7 +1,7 @@
-const bPing = require('../../app.ts')
+const bStatus = require('../../../app.ts')
 
 test('requests the "/ping" route', async () => {
-  const app = bPing()
+  const app = bStatus()
   const response = await app.inject({
     method: 'GET',
     url: '/ping'
